@@ -1,0 +1,33 @@
+<!-- header -->
+<header class="header container-fliud {{#if feature_image}} with-feature-image{{/if}} {{#if feature_image}}" style="background-image: url({{feature_image}}){{else if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}{{/if}}">
+	<!-- navbar -->
+	{{> "site-nav"}}
+	<!-- header__block -->
+	<div class="header__block container">
+		<!-- join-now -->
+		<div class="join-now">
+			<div class="join-now-left">
+				<!--
+				<h1 class="join-now__main-title join-now__main-title--first">
+					Watch Videos, Earn Bitcoins
+				</h1>
+				-->
+				<!-- join-now__main-title END -->
+				<h3 class="join-now__login-title" >Bucksy is the easiest place to<br class="d-xs-none"> earn cash and more!</h3>
+				<form class="form-inline form-inline--join-now justify-content-center">
+					<input type="text" class="form-control form-control--nickname" id="nickname" placeholder="Choose your nickname">				
+					<button type="submit" class="btn btn--join-now">Join Now</button>
+				</form>
+				<div class="d-flex justify-content-center align-items-center">
+					<p class="join-now--text text-center">Already have an account?</p>
+					<button class="btn btn--login" type="button" id="loginMenu" aria-haspopup="true" aria-expanded="false">
+						Login here
+					</button>
+				</div>
+			</div>
+			<div class="join-now-right">
+				<img src="{{asset "img/IMG_05082018_145425_0.png"}}" alt="" width="350">
+			</div>
+		</div><!-- join-now END -->
+	</div><!-- header__block END -->
+</header><!-- header END -->

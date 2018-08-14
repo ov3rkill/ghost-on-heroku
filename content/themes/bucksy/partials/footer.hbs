@@ -1,0 +1,55 @@
+<!-- footer -->
+<footer class="footer container-fluid">
+	<!-- footer__block -->
+	<div class="footer__block container">
+		<!-- join-now -->
+		<div class="join-now join-now--footer">
+			<h2 class="join-now__main-title join-now__main-title--footer"><span class="join-now__main-title--bold">Ready</span> to start<br class="d-xs-none"> your <span class="join-now__main-title--bold">journey?</span></h2>
+			<h3 class="join-now__login-title join-now__login-title--footer" >Start earning coins and use<br class="d-xs-none"> them to buy Gift Cards!</h3>
+			<form class="form-inline form-inline--join-now justify-content-center">
+				<input type="text" class="form-control form-control--nickname" id="nickname" placeholder="Choose your nickname">				
+				<button type="submit" class="btn btn--join-now">Join Now</button>
+			</form>
+			<div class="d-flex justify-content-center align-items-center">
+				<p class="join-now--text text-center">Already have an account?</p>
+				<button class="btn btn--login" type="button" id="loginMenu" aria-haspopup="true" aria-expanded="false">
+					Login here
+				</button>
+			</div>
+		</div><!-- join-now END -->
+		<!-- footer__nav -->
+		<div class="footer__nav row">
+			<div class="col-sm-12 col-sm-12 col-md-5">
+				<!-- navbar-nav -->
+				<nav class="nav nav--footer-left">
+					<a class="nav-link top-link top-link--footer" href="#">How it Works</a>
+					<a class="nav-link top-link top-link--footer" href="#">Blog</a>
+					<a class="nav-link top-link top-link--footer" href="#">About Us</a>
+					<a class="nav-link top-link top-link--footer" href="#">Support</a>
+				</nav><!-- navbar-nav END -->
+			</div>
+			<div class="d-none d-md-block col-md-2 text-center ">
+				{{#if @blog.logo}}
+					<a class="navbar-brand text-center" href="{{@blog.url}}">
+						<img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}">
+					</a>
+				{{else}}
+					<a class="navbar-brand text-center" href="{{@blog.url}}">
+						{{@blog.title}}
+					</a>
+				{{/if}}
+			</div>
+			<!-- col-sm-5 -->
+			<div class="col-sm-12 col-md-5">
+				<!-- nav -->
+				<nav class="nav nav--footer-right">
+					<a class="nav-link top-link top-link--footer" href="#">Help</a>
+					<a class="nav-link top-link top-link--footer" href="#">Affiliate</a>
+					<a class="nav-link top-link top-link--footer" href="#">Terms of Service</a>
+					<a class="nav-link top-link top-link--footer" href="#">Login</a>
+				</nav><!-- nav END -->
+			</div><!-- col-sm-5 END -->
+		</div><!-- footer__nav END -->
+		<p class="footer__colyright text-center">&copy; {{date format="YYYY"}} {{@blog.title}} - All rights reserved</p>
+	</div><!-- footer__block END -->
+</footer><!-- footer END -->

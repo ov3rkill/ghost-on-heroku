@@ -1,0 +1,88 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar--index">
+	<!-- container -->
+	<div class="container-fluid navbar__block">			
+		{{#if @blog.logo}}
+			<a class="navbar-brand navbar-brand--header" href="{{@blog.url}}">
+				<img class="logo" src="{{@blog.logo}}" alt="{{@blog.title}}">
+			</a>
+		{{else}}
+			<a class="navbar-brand navbar-brand--header" href="{{@blog.url}}">
+				{{@blog.title}}
+			</a>
+		{{/if}}
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="icon icon--hamburger"></i>
+		</button>
+		<!-- navbar-collapse -->
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<!-- navbar-nav -->
+			<ul class="navbar-nav navbar__top-menu">
+				<li class="nav-item">
+					<a class="nav-link top-link" href="#">How it Works</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link top-link" href="#">Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link top-link" href="#">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link top-link" href="#">Support</a>
+				</li>
+			</ul><!-- navbar-nav END -->
+			<!-- social-links -->
+			<ul class="navbar-nav social-links">
+				{{#if @blog.twitter}}
+				<li class="nav-item">
+					<a class="nav-link" href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">
+						<i class="social-link social-link--twitter"></i>
+					</a>
+				</li>
+				{{/if}}
+				<li class="nav-item">
+					<a class="nav-link" href="" target="_blank" rel="noopener">
+						<i class="social-link social-link--instagram"></i>
+					</a>
+				</li>
+				{{#if @blog.facebook}}
+					<li class="nav-item">
+						<a class="nav-link" href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">
+							<i class="social-link social-link--facebook"></i>
+						</a>
+					</li>
+				{{/if}}
+				<li class="nav-item">
+					<a class="nav-link" href="" target="_blank" rel="noopener">
+						<i class="social-link social-link--steam"></i>
+					</a>
+				</li>
+			</ul><!-- social-links END -->
+			<!-- login -->
+			<div class="dropdown login">
+				<button class="btn btn--login dropdown-toggle"
+								type="button" id="loginMenu" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false">
+					Login
+				</button>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu--login dropdown-menu--triangle-right-gray" aria-labelledby="loginMenu">
+					<a class="dropdown-item btn--blue-link btn--modal" href="#">
+						<i class="icon icon--google-wrap icon--white">
+							<i class="icon icon--link-small icon--google-color icon--flex-large"></i>
+						</i>Sign in with Google
+					</a>
+					<a class="dropdown-item btn--blue-dark btn--modal" href="#">
+						<i class="icon icon--google-wrap">
+							<i class="icon icon--link-small icon--fb-white icon--flex-large"></i>
+						</i>Continue with Facebook
+					</a>
+					<p class="strikethrough-text"><span class="strikethrough-text__data strikethrough-text__data--bg-lite">or</span></p>
+					<input type="text" class="form-control input input--white-long input--modal" placeholder="Username or email">
+					<input type="text" class="form-control input input--white-long input--modal" placeholder="Password">
+					<button class="btn btn--green btn--modal">Join Now</button>
+					<a href="#" class="top-link top-link--green top-link--modal">Forgot password?</a>
+				</div>
+			</div><!-- login END -->
+		</div><!-- navbar-collapse END -->
+	</div><!-- container END -->
+</nav><!-- navbar END -->
