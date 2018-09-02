@@ -3932,6 +3932,10 @@ body {
       background-image: url("../img/header/steam-green.svg"); }
   .social-link--dashboard {
     margin-left: 10px; }
+  .social-link--discord {
+    background-image: url("../img/header/discord-white.svg"); }
+  .social-link--discord:hover, .social-link--discord:active, .social-link--discord:focus {
+    background-image: url("../img/header/discord-green.svg"); }
 
 .top-link {
   font-size: 16px;
